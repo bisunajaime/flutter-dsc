@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dsc/constants.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 _launchURL(String url) async {
@@ -66,7 +67,7 @@ class SocialInfo extends StatelessWidget {
                 child: Icon(
                   FontAwesomeIcons.facebookSquare,
                   color: Colors.white,
-                  size: 40.0,
+                  size: 25.0,
                 ),
               ),
             ),
@@ -81,7 +82,37 @@ class SocialInfo extends StatelessWidget {
                 child: Icon(
                   FontAwesomeIcons.instagram,
                   color: Colors.white,
-                  size: 40.0,
+                  size: 25.0,
+                ),
+              ),
+            ),
+          ),
+          Expanded(
+            child: GestureDetector(
+              onTap: () => _launchURL('https://github.com'),
+              child: Container(
+                height: double.infinity,
+                width: double.infinity,
+                decoration: bgGithub,
+                child: Icon(
+                  FontAwesomeIcons.github,
+                  color: Colors.white,
+                  size: 25.0,
+                ),
+              ),
+            ),
+          ),
+          Expanded(
+            child: GestureDetector(
+              onTap: () => _launchURL('https://linkedin.com'),
+              child: Container(
+                height: double.infinity,
+                width: double.infinity,
+                decoration: bgLinkedin,
+                child: Icon(
+                  FontAwesomeIcons.linkedin,
+                  color: Colors.white,
+                  size: 25.0,
                 ),
               ),
             ),
@@ -96,7 +127,7 @@ class SocialInfo extends StatelessWidget {
                 child: Icon(
                   FontAwesomeIcons.twitter,
                   color: Colors.white,
-                  size: 40.0,
+                  size: 25.0,
                 ),
               ),
             ),
@@ -111,7 +142,9 @@ class UserInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(14.0),
+      padding: const EdgeInsets.symmetric(
+        vertical: 30.0,
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
@@ -125,7 +158,7 @@ class UserInfo extends StatelessWidget {
             children: <Widget>[
               Text(
                 'Jose Jaime G. Bisuna',
-                style: TextStyle(
+                style: GoogleFonts.lato(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                   fontSize: 15.0,
@@ -136,7 +169,7 @@ class UserInfo extends StatelessWidget {
               ),
               Text(
                 'BS-IS',
-                style: TextStyle(
+                style: GoogleFonts.lato(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                   fontSize: 15.0,
@@ -147,7 +180,7 @@ class UserInfo extends StatelessWidget {
               ),
               Text(
                 '11701234',
-                style: TextStyle(
+                style: GoogleFonts.lato(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                   fontSize: 15.0,

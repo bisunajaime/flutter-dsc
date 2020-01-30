@@ -38,3 +38,10 @@ const bgTwitter = BoxDecoration(
     bottomRight: Radius.circular(10),
   ),
 );
+
+const bgGithub = BoxDecoration(
+  color: Color(0xff24292e),
+);
+const bgLinkedin = BoxDecoration(
+  color: Color(0xff0e76a8),
+);
